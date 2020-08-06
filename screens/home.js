@@ -1,21 +1,37 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity, FlatList } from 'react-native'
 import { Card, ListItem, Button, Icon } from 'react-native-elements';
 import { globalStyles } from '../styles/global';
+import database from '@react-native-firebase/database';
+import { db } from '../src/config';
 
 const Home = ({ navigation }) => {
 
-    const [names, setName] = useState([
-        { name: "Jaliby", status:"OPEN", key: '1' },
-        { name: "Mang Enasal", status:"OPEN", key: '2' },
-        { name: "Makdo", status:"OPEN", key: '3' },
-        { name: "Chawkeng", status:"OPEN", key: '4' },
-        { name: "Bin Ros", status:"OPEN", key: '5' },
-        { name: "Grahi", status:"OPEN", key: '6' }
-    ])
+    // useEffect(() => {
+    //     db.ref('/items').push({
+    //         names
+            
+    //       });
+    // })
 
-    
+    const [names, setName] = useState(
+        // db.ref('/items/-ME0LOFi7ZCAiV7FuWZN/names')
+        // .once('value')
+        // .then(snapshot => {
+        //     snapshot.val()
+        // })
+    )
+
+    // { name: "Jaliby", status:"OPEN", key: '1' },
+    //     { name: "Mang Enasal", status:"OPEN", key: '2' },
+    //     { name: "Makdo", status:"OPEN", key: '3' },
+    //     { name: "Chawkeng", status:"OPEN", key: '4' },
+    //     { name: "Bin Ros", status:"OPEN", key: '5' },
+    //     { name: "Grahi", status:"OPEN", key: '6' }
+    const stores = () => {
+       
+    }
     
     return (
         <View style={globalStyles.container}>

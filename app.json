@@ -17,10 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.saligdeliveries"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "android": {
+      "package": "com.saligdeliveries"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
   }
 }
